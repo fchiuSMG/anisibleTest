@@ -1,9 +1,6 @@
----
-
-- name: Network Getting Started First Playbook
+- name: Hello World Sample
   hosts: all
   tasks:
-
-    - name: Display the config
+    - name: Hello Message
       debug:
-        msg: "The hostname is {{ ansible_net_hostname }} and the OS is {{ ansible_net_version }}"
+        msg: "Hello World!"
