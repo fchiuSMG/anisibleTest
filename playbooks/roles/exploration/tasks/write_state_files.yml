@@ -12,3 +12,6 @@
       package: "python",
       version: "3.2.1"
     }
+
+- name: Print file
+  msg: "{{state_file}}"

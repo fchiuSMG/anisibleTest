@@ -1,8 +1,11 @@
 ---
-- name: Read state files
-  vars:
-    jsondata: "{{ lookup('file', '/tmp/state_files/my_file.json') | from_json }}"
-  tasks:
-    - name: Print variable
-      ansible.builtin.debug:
-        var: jsondata
+- name: Display the JSON file content
+  shell: cat /tmp/state_files/my_file.json
+  register: result
+
+- name: save the Json data to a Variable as a Fact
+  set_fact:
+    jsondata: "{{ result.stdout | from_json }}"
+
+- name: display json content
+  msg: "{{jsondata}}"
