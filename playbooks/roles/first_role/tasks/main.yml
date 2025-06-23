@@ -7,3 +7,5 @@
   copy:
     content: "This is a text file."
     dest: /tmp/my_directory/my_file.txt
+- name: Extra Facts
+  import_tasks: write_fact.yml

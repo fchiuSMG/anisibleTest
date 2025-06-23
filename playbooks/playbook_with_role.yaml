@@ -1,5 +1,4 @@
 ---
 - hosts: all
   roles:
-    - write_fact.yml
     - main.yml
