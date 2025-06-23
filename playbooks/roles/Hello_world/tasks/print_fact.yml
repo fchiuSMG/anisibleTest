@@ -1,0 +1,4 @@
+---
+- name: Display the config
+  debug:
+    msg: "The hostname is {{ ansible_hostname }}, the OS is {{ ansible_system }}, Python version is {{ansible_python_version}}"
