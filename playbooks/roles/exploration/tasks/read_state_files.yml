@@ -10,3 +10,7 @@
 - name: display json content
   debug:
     msg: "{{jsondata}}"
+
+- name: display single json content
+  debug:
+    msg: "this is a state file for {{jsondata.package}}, version: {{jsondata.version}}"
