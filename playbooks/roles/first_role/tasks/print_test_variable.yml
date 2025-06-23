@@ -1,0 +1,4 @@
+---
+- name: Display the variable
+  debug:
+    msg: "test-var is {{test-var}}, test-var2 is {{test-var2}}"

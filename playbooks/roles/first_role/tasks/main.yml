@@ -1,5 +1,9 @@
 ---
 - name: Step 1
   import_tasks: create_file_in_folder.yml
+  
 - name: Extra Facts
-  import_tasks: write_fact.yml
+  import_tasks: print_fact.yml
+
+- name: test variable in role
+  import_tasks: print_test_variable.yml
