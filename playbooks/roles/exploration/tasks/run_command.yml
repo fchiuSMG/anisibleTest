@@ -1,0 +1,6 @@
+---
+# https://docs.ansible.com/ansible/latest/collections/ansible/builtin/command_module.html
+- name: Run a script using an executable in a system path
+  ansible.builtin.script: /some/local/script.py
+  args:
+    executable: python3
