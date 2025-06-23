@@ -1,4 +1,4 @@
 ---
 
 - name: Extra Facts
-  import_tasks: "exploration/print_fact.yml"
+  import_tasks: "exploration/tasks/print_fact.yml"
