@@ -4,15 +4,11 @@
     path: /tmp/state_files
     state: directory
 - name: Create a state file
-  copy:
-    dest: /tmp/state_files/my_file.json
-    content: "{{state_file}}"
   vars: 
     state_file: {
       package: "python",
       version: "3.2.1"
     }
-
-- name: Print file
-  debug:
-    msg: "{{state_file}}"
+  copy:
+    dest: /tmp/state_files/my_file.json
+    content: "{{state_file}}"
