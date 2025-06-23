@@ -6,4 +6,4 @@
 
     - name: Display the config
       debug:
-        msg: "The hostname is {{ ansible_net_hostname }} and the OS is {{ ansible_net_version }}"
+        msg: "The hostname is {{ ansible_hostname }} and the OS is {{ ansible_system }}"
