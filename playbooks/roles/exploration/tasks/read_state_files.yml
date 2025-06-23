@@ -8,4 +8,5 @@
     jsondata: "{{ result.stdout | from_json }}"
 
 - name: display json content
-  msg: "{{jsondata}}"
+  debug:
+    msg: "{{jsondata}}"
