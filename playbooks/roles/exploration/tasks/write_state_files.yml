@@ -1,4 +1,5 @@
 ---
+# might not work when dealing with remote host, need testing
 - name: Create state_files directory
   file:
     path: /tmp/state_files

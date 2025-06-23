@@ -1,4 +1,5 @@
 ---
+# might not work when dealing with remote host, need testing
 - name: Display the JSON file content
   shell: cat /tmp/state_files/my_file.json
   register: result
