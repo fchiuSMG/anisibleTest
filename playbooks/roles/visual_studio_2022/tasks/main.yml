@@ -1,20 +1,16 @@
 --- 
-- name: Install visual studio 2022 
-  hosts: all 
-  remote_user: svc_build 
+tasks: 
+  - name: PlaceHolder
+    import_tasks: "roles/Common/tasks/print_role.yml"
+# - name: Write the vsconfig file 
+#   ansible.windows.win_template:  
+#     src: .vsconfig.j2 
+#     dest: C:\temp\.vsconfig 
 
-  tasks: 
-    - name: PlaceHolder
-      import_tasks: "roles/Common/tasks/print_role.yml"
-  # - name: Write the vsconfig file 
-  #   ansible.windows.win_template:  
-  #     src: .vsconfig.j2 
-  #     dest: C:\temp\.vsconfig 
-
-  # - name: Install visual studio 
-  #   ansible.windows.win_command: 
-  #     argv: 
-  #       - "{{ provisioning_share }}\\visual_studio_2022\\{{ desired.visual_studio_2022.version }}\vsInstaller.exe" 
-  #       - install 
-  #       - -wait 
-  #       - -config=”C:\temp\.vsconfig”
+# - name: Install visual studio 
+#   ansible.windows.win_command: 
+#     argv: 
+#       - "{{ provisioning_share }}\\visual_studio_2022\\{{ desired.visual_studio_2022.version }}\vsInstaller.exe" 
+#       - install 
+#       - -wait 
+#       - -config=”C:\temp\.vsconfig”
