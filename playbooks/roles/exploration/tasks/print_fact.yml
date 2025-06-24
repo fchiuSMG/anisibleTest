@@ -3,3 +3,4 @@
   debug:
     msg: "The hostname is {{ ansible_hostname }}, the OS is {{ ansible_system }}, Python version is {{ansible_python_version}}\n 
          Calling role: {{ ansible_parent_role_names[0] | default(role_name) }}"
+         
