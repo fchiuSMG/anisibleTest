@@ -1,6 +1,8 @@
 - name: Get content of remote file
+  var: 
+    group: main_package_agents
   ansible.builtin.slurp:
-    src: ../groups/{{main_package_agents}}.yml
+    src: ../groups/{{group}}.yml
   register: remote_file
 
 - name: Interpret remote file content as yaml
