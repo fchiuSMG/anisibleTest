@@ -15,3 +15,4 @@
         - "{{ provisioning_share }}\\visual_studio_2022\\{{ desired.visual_studio_2022.version }}\vsInstaller.exe" 
         - install 
         - -wait 
+        - -config=”C:\temp\.vsconfig”
