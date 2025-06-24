@@ -8,7 +8,7 @@
   - name: Trigger specified roles
     include_role:
       name: "{{item}}"
-    when: ansible_facts["{{item}}_configuration"] is defined
+    #when: ansible_facts["{{item}}_configuration"] is defined
     loop:
     - visual_studio_2022
     - teamcity
