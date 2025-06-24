@@ -3,7 +3,11 @@
   tasks:
   - name: Include common
     include_role:
-      name: Common
+      name: common
+  
+  - name: Include visual_studio_2022
+    include_role:
+      name: visual_studio_2022
   
   - name: Trigger specified roles
     include_role:
