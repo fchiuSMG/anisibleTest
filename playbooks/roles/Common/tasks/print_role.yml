@@ -1,3 +1,0 @@
-- name: Print Role
-  ansible.builtin.debug:
-    msg: "Calling role: {{ ansible_parent_role_names[0] | default(role_name) }}"
