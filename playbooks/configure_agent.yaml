@@ -1,0 +1,19 @@
+---
+- hosts: all
+  tasks:
+  - name: Include common
+    include_role:
+      name: Common
+  
+  - name: Trigger specified roles
+    include_role:
+      name: "{{item}}"
+    when: ansible_facts["{{item}}_configuration"] is defined
+    loop:
+    - visual_studio_2022
+    - teamcity
+    - ps4_sdk
+    - ps5_sdk
+
+
+  

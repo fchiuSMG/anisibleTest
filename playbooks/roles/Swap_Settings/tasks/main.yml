@@ -1,0 +1,3 @@
+---
+- name: PlaceHolder Task
+  import_tasks: "roles/Common/tasks/print_role.yml"
