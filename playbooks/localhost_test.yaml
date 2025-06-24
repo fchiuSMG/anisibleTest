@@ -3,5 +3,5 @@
   tasks:
   - name: Include common
     include_role:
-      name: Common
+      name: common
 
