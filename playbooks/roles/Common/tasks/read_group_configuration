@@ -18,9 +18,9 @@
 
 - name: Load group_configuration into variables
   ansible.builtin.set_fact:
-    "{{item.key}}_configuration": item.value
+    "{{item.key}}_configuration": "{{item.value}}"
   loop: "{{ group_configuration | dict2items }}"
 
 - name: print test var 
   ansible.builtin.debug:
-    msg: "{{teamcity_configuration}}"
+    msg: "Teamcity config : {{teamcity_configuration}}"
