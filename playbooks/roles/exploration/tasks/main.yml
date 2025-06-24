@@ -16,3 +16,6 @@
 
 - name: send api
   import_tasks: run_api.yml
+
+- name: sent script
+  import_tasks: run_command.yml

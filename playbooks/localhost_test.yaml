@@ -1,0 +1,10 @@
+---
+- hosts: all
+  tasks:
+  - name: Include exploration role
+    include_role:
+      name: exploration
+
+  - name: Test Include exploration role twice
+    include_role:
+      name: exploration
