@@ -1,6 +1,10 @@
 --- 
 - name: PlaceHolder
   import_tasks: "roles/common/tasks/print_role.yml"
+
+- name: print config
+  debug:
+    msg: "{{desired}}"
 # - name: Write the vsconfig file 
 #   ansible.windows.win_template:  
 #     src: .vsconfig.j2 

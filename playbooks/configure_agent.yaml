@@ -1,13 +1,13 @@
 ---
 - hosts: all
   tasks:
-  - name: Include common
-    include_role:
-      name: common
-  
   - name: Include visual_studio_2022
     include_role:
       name: visual_studio_2022
+
+  - name: Include common
+    include_role:
+      name: common
   
   - name: Trigger specified roles
     include_role:
