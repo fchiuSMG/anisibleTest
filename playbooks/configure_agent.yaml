@@ -12,7 +12,7 @@
   - name: Trigger specified roles
     include_role:
       name: "{{item}}"
-    when: desired[{{item}}] is defined
+    when: desired["visual_studio_2022"] is defined
     loop:
     - visual_studio_2022
     - teamcity
