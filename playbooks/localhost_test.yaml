@@ -5,6 +5,3 @@
     include_role:
       name: Common
 
-  - name: Include exploration role
-    include_role:
-      name: exploration

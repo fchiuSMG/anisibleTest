@@ -1,12 +1,17 @@
 - name: Get content of remote file
   ansible.builtin.slurp:
-    src: ../groups/main_package_agents.yml
+    src: ../groups/{{main_package_agents}}.yml
   register: remote_file
 
 - name: Interpret remote file content as yaml
   ansible.builtin.set_fact:
-    remote_yaml: '{{ remote_file.content | b64decode | from_yaml }}'
+    group_configuration: '{{ remote_file.content | b64decode | from_yaml }}'
 
 - name: Print yaml for debugging purposes
   ansible.builtin.debug:
-    var: remote_yaml
+    var: group_configuration
+
+- name: Test load variable 
+  ansible.builtin.debug:
+    msg: "key: {{ item.key }} ;; value {{ item.value }}"
+  loop: "{{ group_configuration | dict2items }}"
