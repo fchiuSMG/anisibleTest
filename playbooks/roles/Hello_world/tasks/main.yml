@@ -1,3 +1,0 @@
----
-- name: Extra Facts
-  import_tasks: "roles/exploration/tasks/print_fact.yml"
