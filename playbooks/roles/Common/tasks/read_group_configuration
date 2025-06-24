@@ -6,7 +6,7 @@
 
 - name: Interpret remote file content as yaml
   ansible.builtin.set_fact:
-    group_configuration_data: '{{ remote_file.content | b64decode | from_yaml }}'
+    group_configuration: '{{ remote_file.content | b64decode | from_yaml }}'
 
 # - name: Print yaml for debugging purposes
 #   ansible.builtin.debug:
