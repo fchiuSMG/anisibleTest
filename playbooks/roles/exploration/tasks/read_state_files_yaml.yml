@@ -10,7 +10,7 @@
 
 - name: display yaml content
   debug:
-    msg: "{{yamldata}}"
+    msg: "{{ yamldata }}"
 
 - name: display single yaml content
   debug:
