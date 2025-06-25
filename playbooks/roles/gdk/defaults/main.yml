@@ -1,6 +1,0 @@
-desired:
-  visual_studio_2022: 
-    version: “00.11.1” 
-    cxx_compiler_versions: 
-      - “17.8” 
-      - “17.6” 
