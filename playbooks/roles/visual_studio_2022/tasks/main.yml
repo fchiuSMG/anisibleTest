@@ -5,10 +5,12 @@
 - name: print config
   debug:
     msg: "{{desired}}"
-# - name: Write the vsconfig file 
-#   ansible.windows.win_template:  
-#     src: .vsconfig.j2 
-#     dest: C:\temp\.vsconfig 
+  when: desired["visual_studio_2022"] is defined
+  
+- name: Write the vsconfig file 
+  ansible.windows.win_template:  
+    src: .vsconfig.j2 
+    dest: C:\temp\.vsconfig 
 
 # - name: Install visual studio 
 #   ansible.windows.win_command: 
