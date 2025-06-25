@@ -8,7 +8,10 @@
   vars: 
     state_file: {
       package: "python",
-      version: "3.2.1"
+      version: "3.2.1",
+      test: {
+        tested: "hi"
+      }
     }
   copy:
     dest: /tmp/state_files/my_file.json

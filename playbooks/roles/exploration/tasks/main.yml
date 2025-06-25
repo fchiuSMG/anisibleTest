@@ -9,10 +9,10 @@
   import_tasks: print_test_variable.yml
 
 - name: write state files
-  import_tasks: write_state_files.yml
+  import_tasks: write_state_files_json.yml
 
 - name: read state files
-  import_tasks: read_state_files.yml
+  import_tasks: read_state_files_json.yml
 
 - name: write state files yaml
   import_tasks: write_state_files_yaml.yml
