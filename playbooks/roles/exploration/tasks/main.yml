@@ -14,6 +14,12 @@
 - name: read state files
   import_tasks: read_state_files.yml
 
+- name: write state files yaml
+  import_tasks: write_state_files_yaml.yml
+
+- name: read state files yaml
+  import_tasks: read_state_files_yaml.yml
+
 - name: send api
   import_tasks: run_api.yml
 

@@ -1,0 +1,17 @@
+---
+# might not work when dealing with remote host, need testing
+- name: Display the yaml file content
+  shell: cat /tmp/state_files/my_file.json
+  register: result
+
+- name: save the yaml data to a Variable as a Fact
+  set_fact:
+    yamldata: "{{ result.stdout | from_yaml }}"
+
+- name: display yaml content
+  debug:
+    msg: "{{yamldata}}"
+
+- name: display single yaml content
+  debug:
+    msg: "this is a state file for {{yamldata.package}}, version: {{yamldata.version}}"
