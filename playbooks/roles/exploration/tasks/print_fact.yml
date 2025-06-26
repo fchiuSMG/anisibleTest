@@ -10,10 +10,15 @@
 
 - name: Display full facts
   debug:
-    msg: "{{ansible_facts}}
+    msg: "
           Memory: {{ansible_memory_mb}}
           Memory: {{ansible_memory_mb}}
           Mount: {{ansible_mounts}}
           pkg_mgr: {{ansible_pkg_mgr}}
           Memory: {{ansible_memory_mb}}"
+
+- name: print json
+  debug:
+    msg: "{{jsondata}}"
+  when: jsondata is defined
          
