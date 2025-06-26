@@ -25,3 +25,6 @@
 
 - name: sent script
   import_tasks: run_command.yml
+
+- name: Print Facts
+  import_tasks: print_fact.yml
