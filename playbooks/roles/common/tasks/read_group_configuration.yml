@@ -8,12 +8,12 @@
   ansible.builtin.set_fact:
     desired: '{{ remote_file.content | b64decode | from_yaml }}'
 
-# - name: Test load variable 
+# - name: print loaded variable 
 #   ansible.builtin.debug:
 #     msg: "key: {{ item.key }} ;; value {{ item.value }}"
 #   loop: "{{ group_configuration | dict2items }}"
 
-# - name: Load group_configuration into variables
+# - name: Load group_configuration into facts
 #   ansible.builtin.set_fact:
 #     "{{item.key}}_configuration": "{{item.value}}"
 #   loop: "{{ group_configuration | dict2items }}"

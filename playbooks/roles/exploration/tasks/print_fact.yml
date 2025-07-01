@@ -1,8 +1,9 @@
 ---
 - name: Display the config
   debug:
-    msg: "The hostname is {{ ansible_hostname }}, the OS is {{ ansible_system }}, Python version is {{ansible_python_version}}\n 
-         Calling role: {{ ansible_parent_role_names[0] | default(role_name) }}"
+    msg: "The hostname is {{ ansible_hostname }}, the OS is {{ ansible_system }}, Python version is {{ansible_python_version}}
+          Master role: {{ ansible_parent_role_names[0]}}
+          Calling role: {{ ansible_parent_role_names[0] | default(role_name) }}"
 
 - name: Print all available facts
   ansible.builtin.debug:

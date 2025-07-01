@@ -5,26 +5,29 @@
 - name: Extra Facts
   import_tasks: print_fact.yml
 
-- name: test variable in role
-  import_tasks: print_test_variable.yml
+# - name: test variable in role
+#   import_tasks: print_test_variable.yml
 
-- name: write state files
-  import_tasks: write_state_files_json.yml
+# - name: write state files
+#   import_tasks: write_state_files_json.yml
 
-- name: read state files
-  import_tasks: read_state_files_json.yml
+# - name: read state files
+#   import_tasks: read_state_files_json.yml
 
-- name: write state files yaml
-  import_tasks: write_state_files_yaml.yml
+# - name: write state files yaml
+#   import_tasks: write_state_files_yaml.yml
 
-- name: read state files yaml
-  import_tasks: read_state_files_yaml.yml
+# - name: read state files yaml
+#   import_tasks: read_state_files_yaml.yml
 
-- name: send api
-  import_tasks: run_api.yml
+# - name: send api
+#   import_tasks: run_api.yml
 
-- name: sent script
-  import_tasks: run_command.yml
+# - name: sent script
+#   import_tasks: run_command.yml
 
-- name: Print Facts
-  import_tasks: print_fact.yml
+# - name: Print Facts
+#   import_tasks: print_fact.yml
+
+- name: test whether package exist
+  import_tasks: print_package_facts.yml
