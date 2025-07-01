@@ -12,7 +12,7 @@
   ansible.builtin.set_fact:
     desired:
       python:
-        version: "3.12.11"
+        version: "3.12.30"
   when: desired["python"] is undefined
 
 - name: set var
