@@ -1,0 +1,4 @@
+--- 
+- name: read current facts
+  ansible.builtin.set_fact:
+    current: "{{ current | combine({'python': {'version': '{{ansible_python_version}}'}}, recursive=True) }}"

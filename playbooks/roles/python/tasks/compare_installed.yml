@@ -1,13 +1,6 @@
 --- 
-
-# check desired
-
-# check current
-
-- name: print config
-  debug:
-    msg: "{{desired}}"
-
+# get desired
+# default if desired not exist
 - name: set default
   ansible.builtin.set_fact:
     desired:
@@ -15,10 +8,11 @@
         version: "3.12.30"
   when: desired["python"] is undefined
 
-- name: set var
-  ansible.builtin.set_fact:
-    current_version: "{{current['python']['version']}}"
-    desired_version: "{{desired['python']['version']}}"
+# check current
+
+# gather current_facts if current not exist
+- name: Get Current
+  import_tasks: "roles/python/tasks/read_current_facts.yml"
 
 # compare 
 - name: compared python version

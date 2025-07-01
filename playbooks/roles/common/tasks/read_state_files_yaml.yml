@@ -1,7 +1,5 @@
 ---
 # might not work when dealing with remote host, need testing
-
-
 - name: Display the yaml file content
   shell: cat /ansible/state_files/{{current_package}}.json
   register: result

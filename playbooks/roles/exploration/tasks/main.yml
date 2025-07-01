@@ -32,8 +32,9 @@
 # - name: Print Facts
 #   import_tasks: print_fact.yml
 
-- name: test whether package exist
-  import_tasks: print_package_facts.yml
+# - name: test whether package exist
+#   import_tasks: print_package_facts.yml
 
 - name: python test
-  import_tasks: roles/python/tasks/main.yml
+  include_role:
+    name: python
