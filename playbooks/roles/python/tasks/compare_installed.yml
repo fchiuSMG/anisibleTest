@@ -24,5 +24,5 @@
 - name: compared python version
   debug:
     msg: "current_version : is higher than desired"
-  when: current_version is version(desired_version, '>=')
+  when: current.python.version is version(desired.python.version, '>=')
 
