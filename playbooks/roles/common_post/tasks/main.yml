@@ -2,4 +2,4 @@
 - name: Save State files
   block:
     - name: Save state file
-      import_tasks: "roles/common_post/tasks/gather_version.yml"
+      import_tasks: "roles/common_post/tasks/write_state_files_yaml.yml"
