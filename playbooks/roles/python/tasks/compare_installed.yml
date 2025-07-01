@@ -7,12 +7,14 @@
   debug:
     msg: "{{desired}}"
 
+- name: set var
+  var:
+    current_version: "{{current['python']['version']}}"
+    desired_version: "{{desired['python']['version']}}"
+
 # compare 
 - name: compared python version
   debug:
     msg: "current_version : is higher than desired"
-  var:
-    current_version: "{{current['python']['version']}}"
-    desired_version: "{{desired['python']['version']}}"
   when: current_version is version(desired_version, '>=')
 
