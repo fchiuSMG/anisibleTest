@@ -9,7 +9,7 @@
     msg: "{{desired}}"
 
 - name: set default
-  ansible.builtin.set_facts:
+  ansible.builtin.set_fact:
     desired:
       python:
         version: "3.12.11"
