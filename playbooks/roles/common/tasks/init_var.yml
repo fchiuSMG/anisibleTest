@@ -1,0 +1,4 @@
+- name: Init variable
+  ansible.builtin.set_fact:
+    current: {}
+    desired: {}

@@ -1,3 +1,6 @@
 ---
+- name: Init variable
+  import_tasks: init_var.yml
+
 - name: Read group configuration
   import_tasks: read_group_configuration.yml

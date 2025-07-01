@@ -1,0 +1,6 @@
+--- 
+- name: read current facts
+  ansible.builtin.set_fact:
+    current["python"]: 
+  
+  

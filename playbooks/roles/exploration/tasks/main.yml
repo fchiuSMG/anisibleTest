@@ -1,4 +1,7 @@
 ---
+- name: init
+  import_tasks: roles/common
+
 # - name: Step 1
 #   import_tasks: create_file_in_folder.yml
   

@@ -1,0 +1,9 @@
+--- 
+- name: PlaceHolder
+  import_tasks: "roles/common/tasks/print_role.yml"
+
+- name: print config
+  debug:
+    msg: "{{desired}}"
+  when: desired["python"] is defined
+  
