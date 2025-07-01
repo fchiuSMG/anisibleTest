@@ -1,0 +1,5 @@
+---
+- name: Save State files
+  block:
+    - name: Save state file
+      import_tasks: "roles/common_post/tasks/gather_version.yml"

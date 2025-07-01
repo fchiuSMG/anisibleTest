@@ -1,22 +1,7 @@
 --- 
-# get desired
-# default if desired not exist
-- name: set default
-  ansible.builtin.set_fact:
-    desired:
-      python:
-        version: "3.12.30"
-  when: desired["python"] is undefined
-
-# check current
-
-# gather current_facts if current not exist
-- name: Get Current
-  import_tasks: "roles/python/tasks/read_current_facts.yml"
-
 # compare 
 - name: compared python version
   debug:
     msg: "current_version : is higher than desired"
-  when: current.python.version is version(desired.python.version, '>=')
+  when: installed_state.python.version is version(desired.python.version, '>=')
 

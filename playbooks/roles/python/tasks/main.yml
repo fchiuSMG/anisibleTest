@@ -2,10 +2,31 @@
 - name: PlaceHolder
   import_tasks: "roles/common/tasks/print_role.yml"
 
-- name: print config
-  debug:
-    msg: "{{desired}}"
-  when: desired["python"] is defined
+# get desired
+# default if desired not exist
+- name: set default
+  ansible.builtin.set_fact:
+    desired:
+      python:
+        version: "3.12.30"
+  when: desired["python"] is undefined
+
+- name: Get installed state
+  import_tasks: "roles/python/tasks/get_current_facts.yml"
 
 - name: compare Current
-  import_tasks: "roles/python/tasks/compare_installed.yml"
+  import_tasks: "roles/python/tasks/compare_installed.yml"#
+
+
+- name: Temp set current 
+  ansible.builtin.set_fact:
+    current_state: "{{ current_state | 
+      combine(
+        {
+          'python': 
+            {'version': 
+              '{{ansible_python_version}}'
+            }
+        }, 
+        recursive=True
+      ) }}"

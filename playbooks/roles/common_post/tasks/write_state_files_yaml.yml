@@ -1,0 +1,13 @@
+---
+# might not work when dealing with remote host, need testing
+
+- name: Create /ansible directory if it does not exist
+  file:
+    path: /ansible
+    state: directory
+- name: Create a state file
+  vars: 
+    state_file: "{{current_state}}"
+  copy:
+    dest: /ansible/installed_state_file.yaml
+    content: "{{ state_file | to_nice_yaml }}"

@@ -1,4 +1,0 @@
----
-- name: Init variable
-  import_tasks: roles/common/tasks/init_var.yml
-

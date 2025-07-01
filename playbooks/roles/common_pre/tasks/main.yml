@@ -1,0 +1,8 @@
+---
+- name: Init variable
+  import_tasks: roles/common_pre/tasks/init_var.yml
+
+- name: Get installed state file
+  block:
+    - name: Get state_data
+      import_tasks: "roles/common_pre/tasks/gather_version.yml"

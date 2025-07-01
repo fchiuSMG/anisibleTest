@@ -1,13 +1,10 @@
 ---
 # might not work when dealing with remote host, need testing
 - name: Display the yaml file content
-  shell: cat /ansible/state_files/{{current_package}}.json
+  shell: cat /ansible/installed_state_file.yaml
   register: result
 
 - name: save the yaml data to a Variable as a Fact
   ansible.builtin.set_fact:
-    state_data: "{{ result.stdout | from_yaml }}"
+    installed_state: "{{ result.stdout | from_yaml }}"
 
-- name: display yaml content
-  debug:
-    msg: "{{ state_data }}"
