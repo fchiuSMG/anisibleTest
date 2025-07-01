@@ -16,7 +16,7 @@
   when: desired["python"] is undefined
 
 - name: set var
-  ansible.builtin.template:
+  ansible.builtin.set_fact:
     current_version: "{{current['python']['version']}}"
     desired_version: "{{desired['python']['version']}}"
 
