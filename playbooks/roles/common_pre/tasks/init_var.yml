@@ -1,5 +1,5 @@
 - name: Init variable
   ansible.builtin.set_fact:
     installed_state: {}
-    current: {}
+    current_state: {}
     desired: {}

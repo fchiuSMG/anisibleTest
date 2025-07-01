@@ -2,6 +2,6 @@
 # compare 
 - name: compared python version
   debug:
-    msg: "current_version : is higher than desired"
+    msg: "current version : {{installed_state.python.version}} is higher than desired : {{desired.python.version}}"
   when: installed_state.python.version is version(desired.python.version, '>=')
 
