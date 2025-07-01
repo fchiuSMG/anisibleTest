@@ -1,4 +1,5 @@
 --- 
+
 # check desired
 
 # check current
@@ -8,7 +9,7 @@
     msg: "{{desired}}"
 
 - name: set var
-  var:
+  ansible.builtin.template:
     current_version: "{{current['python']['version']}}"
     desired_version: "{{desired['python']['version']}}"
 
