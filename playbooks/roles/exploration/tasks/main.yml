@@ -1,6 +1,6 @@
 ---
 - name: init
-  import_tasks: roles/common/main.yml
+  import_tasks: roles/common/tasks/main.yml
 
 # - name: Step 1
 #   import_tasks: create_file_in_folder.yml
@@ -34,3 +34,6 @@
 
 - name: test whether package exist
   import_tasks: print_package_facts.yml
+
+- name: python test
+  import_tasks: roles/python/tasks/main.yml
