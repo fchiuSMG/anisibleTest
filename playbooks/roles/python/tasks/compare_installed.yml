@@ -8,6 +8,13 @@
   debug:
     msg: "{{desired}}"
 
+- name: set default
+  ansible.builtin.set_facts:
+    desired:
+      python:
+        version: "3.12.11"
+  when: desired["python"] is undefined
+
 - name: set var
   ansible.builtin.template:
     current_version: "{{current['python']['version']}}"

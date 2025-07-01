@@ -4,6 +4,11 @@
     current: 
       python:
         version:  "{{ansible_python_version}}"
+- name: read current facts
+  ansible.builtin.set_fact:
+    current: 
+      visual_studio_code:
+        version:  "{{ansible_python_version}}"
 
 - name: print config
   debug:
