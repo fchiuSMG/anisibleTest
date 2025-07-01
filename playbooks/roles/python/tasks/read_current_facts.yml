@@ -1,14 +1,12 @@
 --- 
 - name: read current facts
   ansible.builtin.set_fact:
-    current: 
-      python:
-        version:  "{{ansible_python_version}}"
+    current:: "{{ current|combine({'python': {'version': {{ansible_python_version}}}}, recursive=True) }}"
+    
 - name: read current facts
   ansible.builtin.set_fact:
-    current: 
-      visual_studio_code:
-        version:  "{{ansible_python_version}}"
+    current:: "{{ current|combine({'visual_studio_code': {'version': {{ansible_python_version}}}}, recursive=True) }}"
+      
 
 - name: print config
   debug:
