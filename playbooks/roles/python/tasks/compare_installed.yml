@@ -1,0 +1,11 @@
+--- 
+# check desired
+
+# check current
+
+# compare 
+- name: compared python version
+  debug:
+    msg: "current_version : is higher than desired"
+  when: current["python"]["version"] is version('{{desired["python"]["version"]}}', '>=')
+

@@ -1,4 +1,4 @@
 --- 
 - name: read current facts
   ansible.builtin.set_fact:
-    current["python"]: {{ansible_python_version}}
+    current["python"]["version"]: {{ansible_python_version}}

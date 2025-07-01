@@ -6,4 +6,9 @@
   debug:
     msg: "{{desired}}"
   when: desired["python"] is defined
-  
+
+- name: Get Current
+  import_tasks: "read_current_facts.yml"
+
+- name: compare Current
+  import_tasks: "copmare_installed.yml"
