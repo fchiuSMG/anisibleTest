@@ -1,7 +1,14 @@
 --- 
 # compare 
-- name: compared python version
-  debug:
-    msg: "current version : {{installed_state.python.version}} is higher than desired : {{desired.python.version}}"
-  when: installed_state.python.version is version(desired.python.version, '>=')
+- name: compare python version
+  block:
+    - name: Higher
+      debug:
+        msg: "current version : {{installed_state.python.version}} is higher than desired : {{desired.python.version}}"
+      when: installed_state.python.version is version(desired.python.version, '>=')
+  rescue:
+    - name: lower
+      debug:
+        msg: "current version : {{installed_state.python.version}} is higher than desired : {{desired.python.version}}"
+      when: installed_state.python.version is version(desired.python.version, '<')
 

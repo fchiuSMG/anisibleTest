@@ -15,7 +15,7 @@
   import_tasks: "roles/python/tasks/get_current_facts.yml"
 
 - name: compare Current
-  import_tasks: "roles/python/tasks/compare_installed.yml"#
+  import_tasks: "roles/python/tasks/compare_installed.yml"
 
 
 - name: Temp set current 
