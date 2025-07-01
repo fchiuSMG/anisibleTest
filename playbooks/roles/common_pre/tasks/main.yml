@@ -5,4 +5,4 @@
 - name: Get installed state file
   block:
     - name: Get state_data
-      import_tasks: "roles/common_pre/tasks/gather_version.yml"
+      import_tasks: "roles/common_pre/tasks/read_state_files_yaml.yml"
