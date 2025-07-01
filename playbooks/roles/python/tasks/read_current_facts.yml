@@ -1,7 +1,10 @@
 --- 
 - name: read current facts
   ansible.builtin.set_fact:
-    current["python"]["version"]: "{{ansible_python_version}}"
+    current["python"]: 
+      "{
+        version:  {{ansible_python_version}}
+      }"
 
 - name: print config
   debug:
