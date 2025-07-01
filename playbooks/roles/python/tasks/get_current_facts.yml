@@ -1,4 +1,4 @@
 --- 
-- name: Get current facts
+- name: Gather installed state
   import_tasks: "roles/python/tasks/gather_version.yml"
   when: installed_state["python"] is undefined

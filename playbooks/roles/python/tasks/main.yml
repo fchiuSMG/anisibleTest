@@ -17,7 +17,6 @@
 - name: compare Current
   import_tasks: "roles/python/tasks/compare_installed.yml"
 
-
 - name: Temp set current 
   ansible.builtin.set_fact:
     current_state: "{{ current_state | 

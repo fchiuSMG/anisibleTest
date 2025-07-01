@@ -6,7 +6,7 @@
         {
           'python': 
             {'version': 
-              '{{ansible_python_version}}'
+              {{ansible_python_version}}
             }
         }, 
         recursive=True
