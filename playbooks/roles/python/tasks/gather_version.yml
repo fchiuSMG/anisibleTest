@@ -1,6 +1,6 @@
 --- 
 - name: get python version
-  shell: python -v
+  shell: python -V
   register: result
 - name: create temp Variable
   ansible.builtin.set_fact:
