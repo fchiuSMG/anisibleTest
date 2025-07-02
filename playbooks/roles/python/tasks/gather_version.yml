@@ -6,7 +6,7 @@
 #| regex_replace('Python ', ' ')
 - name: create temp Variable
   ansible.builtin.set_fact:
-    current_python: "{'python': {'version': {{ result.stdout }}}}"
+    current_python: "{'python': {'version': '{{ result.stdout }}| regex_replace('Python ', '')'}}"
 
 - name: gather current facts
   ansible.builtin.set_fact:
