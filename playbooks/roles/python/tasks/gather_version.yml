@@ -1,14 +1,11 @@
 --- 
+- name: get python version
+  shell: python -v
+  register: result
+- name: create temp Variable
+  ansible.builtin.set_fact:
+    current_python: "{'python': {'version': {{result}}}}"
 - name: gather current facts
   ansible.builtin.set_fact:
-    installed_state: "{{ installed_state | 
-      combine(
-        {
-          'python': 
-            {'version': 
-              {{ansible_python_version}}
-            }
-        }, 
-        recursive=True
-      ) }}"
+    installed_state: "{{ installed_state | combine( current_python, recursive=true ) }}"
   
