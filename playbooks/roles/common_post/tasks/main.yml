@@ -3,3 +3,4 @@
   block:
     - name: Save state file
       import_tasks: "roles/common/tasks/write_state_files_yaml.yml"
+  when: not ansible_check_mode

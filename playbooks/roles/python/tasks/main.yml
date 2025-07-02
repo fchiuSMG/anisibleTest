@@ -29,3 +29,4 @@
         }, 
         recursive=True
       ) }}"
+  when: not ansible_check_mode
