@@ -1,5 +1,10 @@
 --- 
 # compare 
+- name: not installed
+  debug:
+    msg: "Python is not installed"
+  when: installed_state.python.version is not defined
+
 - name: Higher
   debug:
     msg: "current version : {{installed_state.python.version}} is higher than desired : {{desired.python.version}}"
