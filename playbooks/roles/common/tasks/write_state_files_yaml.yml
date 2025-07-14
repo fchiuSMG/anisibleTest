@@ -9,5 +9,5 @@
   vars: 
     state_file: "{{current_state}}"
   copy:
-    dest: /ansible/installed_state_file.yaml
-    content: "{{ state_file | to_nice_yaml }}"
+    dest: /ansible/installed_state_file.yml
+    content: "{{ state_file | to_nice_yml }}"

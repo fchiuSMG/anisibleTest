@@ -5,12 +5,16 @@
     msg: "Python is not installed"
   when: installed_state.python.version is not defined
 
+
 - name: Higher
   debug:
     msg: "current version : {{installed_state.python.version}} is higher than desired : {{desired.python.version}}"
   when: installed_state.python.version is version(desired.python.version, '>=')
+
+
 - name: lower
   debug:
-    msg: "current version : {{installed_state.python.version}} is higher than desired : {{desired.python.version}}"
+    msg: "current version : {{installed_state.python.version}} is lower than desired : {{desired.python.version}}"
   when: installed_state.python.version is version(desired.python.version, '<')
+
 

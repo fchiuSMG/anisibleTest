@@ -1,17 +1,17 @@
 ---
 # might not work when dealing with remote host, need testing
-- name: Check that the installed_state_file.yaml exists
+- name: Check that the installed_state_file.yml exists
   stat:
-    path: /ansible/installed_state_file.yaml
+    path: /ansible/installed_state_file.yml
   register: stat_result
 
 - name: load file content
   check_mode: false
   when: stat_result.stat.exists
   block:
-  - name: Display the yaml file content
-    shell: cat /ansible/installed_state_file.yaml
+  - name: Display the yml file content
+    shell: cat /ansible/installed_state_file.yml
     register: result
-  - name: save the yaml data to a Variable as a Fact
+  - name: save the yml data to a Variable as a Fact
     ansible.builtin.set_fact:
-      installed_state: "{{ result.stdout | from_yaml }}"
+      installed_state: "{{ result.stdout | from_yml }}"

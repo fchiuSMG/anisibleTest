@@ -1,0 +1,6 @@
+--- 
+- name: find visual studio version
+  when: ansible_system is windows
+  ansible.windows.win_powershell:
+    script: |
+      C:\"Program Files (x86)"\"Microsoft Visual Studio"\Installer\vswhere.exe -format json

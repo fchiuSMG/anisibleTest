@@ -2,14 +2,14 @@
 # might not work when dealing with remote host, need testing
 
 
-- name: Display the yaml file content
+- name: Display the yml file content
   shell: cat /ansible/state_files/{{current_package}}.json
   register: result
 
-- name: save the yaml data to a Variable as a Fact
+- name: save the yml data to a Variable as a Fact
   ansible.builtin.set_fact:
-    state_data: "{{ result.stdout | from_yaml }}"
+    state_data: "{{ result.stdout | from_yml }}"
 
-- name: display yaml content
+- name: display yml content
   debug:
     msg: "{{ state_data }}"

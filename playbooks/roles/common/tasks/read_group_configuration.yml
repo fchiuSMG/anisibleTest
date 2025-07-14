@@ -4,9 +4,9 @@
     src: ../groups/{{group_name}}.yml
   register: remote_file
 
-- name: Interpret remote file content as yaml
+- name: Interpret remote file content as yml
   ansible.builtin.set_fact:
-    desired: '{{ remote_file.content | b64decode | from_yaml }}'
+    desired: '{{ remote_file.content | b64decode | from_yml }}'
 
 # - name: print loaded variable 
 #   ansible.builtin.debug:

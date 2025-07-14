@@ -15,4 +15,4 @@
     }
   copy:
     dest: /tmp/state_files/my_file.json
-    content: "{{ state_file| to_nice_yaml }}"
+    content: "{{ state_file| to_nice_yml }}"
